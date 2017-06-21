@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<update-title title="Car Sales Report - Powered By WebFocus"></update-title>
+<update-meta name="description" content="The report provides insight into car sales by model name, dealer cost and retail cost"></update-meta>
+<update-meta name="google-site-verification" content="GqSjqBJigDj0_-jvZBm_PlLnoiLtBxC8q2gdnmOz-K8"></update-meta>
+<!--<update-meta property="og:title" content="Minions"></update-meta>-->
+<!--<update-meta itemprop="description" content="A page specific itemprop description"></update-meta>-->
+
+<section style="padding-top:0px;">
+    <div class="carsales">
+        <h2>Car Sales Report</h2>
+    </div>
+
+    <table class="table" ng-if="isDataExists">
+        <thead class="tableheadcar">
+            <th class="tableheadcar">CAR</th>
+            <th class="tableheadcar">MODEL</th>
+            <th class="tableheadcar">SALES</th>
+            <th class="tableheadcar">DEALER_COST</th>
+            <th class="tableheadcar">RETAIL_COST</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="report in reportData">
+                <td>{{report.CAR}}</td>
+                <td>{{report.MODEL}}</td>
+                <td>{{report.SALES}}</td>
+                <td>{{report.DEALER_COST}}</td>
+                <td>{{report.RETAIL_COST}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
